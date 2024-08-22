@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+
+      <title>Emma Robinson & Kuba z Duba</title>
+
+      <!--Meta property og nastaven pro zobrazení fotky při sdílení na soc. sítích.-->
+      <meta property="og:image" content="https://www.emmarobinson.cz/Images/8.jpg" />
+      <meta property="og:image:type" content="image/jpg">
+      <meta property="og:image:width" content="200">
+
+      <meta name="keywords" content="život s postižením, cestování s postižením, domácí péče, 5tý stupeň,">
+      <meta name="author" content="Emma Robinson">
+      <meta name="description" content="život s postižením, domácí péče"><!--VYPLNIT-->
+
+      <!--Nastavení ikony v liště otevřených záložek-->
+      <link rel = "icon" href ="../icons/icon.jpg" type = "image/x-icon">
+
+      <!-- mobile app icons settings -->
+      <link rel="apple-touch-icon" sizes="180x180" href="./icons/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="./icons/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="./icons/favicon-16x16.png">
+      <link rel="manifest" href="/site.webmanifest">
+
+
+      <!--nahrání stylů-->
+      <link rel="stylesheet" href="../styles/general.css">
+      <link rel="stylesheet" href="../styles/index.css">
+      <link rel="stylesheet" href="../styles/nav.css">
+
+      <!--Meta viewport nastaven pro upravení stránek pro mobilní zařízení-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+      <!--Fonty-->
+      <link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+    <div class="top-container"><!--top container obsahuje hlavní fotku, popisek a citát-->
+          
+        <main-picture class="main-picture">
+          <img style="height:80vh" src="<%= randomPicture %>">
+          <!--Here will be displayed random main picture based on the javascript-->  
+        </main-picture>
+
+        <p class="web-title">Emma Robinson & Kuba z Duba</p>
+        <p class="undertitle">Neuvěřitelná dobrodružství od plotny</p>
+        
+        <!--div-quote - náhodný citát + tlačítka na posuv citátů-->
+        <div class="div-quote">
+          <div class="quote"><!--Here will be displayed random quote based on the javascript-->
+            <%= randomQuote.quote %>
+        </div>
+          <div class="writer"><!--Here will be displayed author of random quote based on the javascript--> 
+            <%= randomQuote.writer %>
+          </div>
+        <!--
+          <img src="../icons/arrow_next_right_icon.png" class="button-citat-right js-button-citat-right" id="Nbtn">
+          <img src="../icons/arrow_next_left_icon.png" class="button-citat-left js-button-citat-left" id="Pbtn">
+        -->
+        </div>
+
+        <div class="bottom-part-main-grid">
+            <div class="articles-bottom-left-grid js-articles-bottom-left-grid">
+                <% data.forEach(articleData => { %>
+                    <% if (articleData.type === 'intermezzo'){ %> 
+                        <%- include('intermezzo.ejs', articleData) %>
+                    <% }else{ %> 
+                        <%- include('article-overview.ejs', articleData) %>
+                    <% } %> 
+                <% }); %>
+
+            </div>
+            <div>
+                <%- include('nav-bar.ejs') %>
+            </div>
+            
+        </div>
+    </div>
+    <footer>
+        <%- include('footer.ejs') %>
+    </footer>
+</body>
+</html>

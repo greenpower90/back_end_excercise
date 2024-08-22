@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+  <html>
+    <head lang="cs">
+      <meta charset="UTF-8">
+
+      <title>Jmenuju se Emma Robinson</title> <!--vyplnit-->
+
+      <link rel="stylesheet" href="../styles/general.css">
+      <link rel="stylesheet" href="../styles/article.css">
+      <link rel="stylesheet" href="../styles/header.css">
+      <link rel="stylesheet" href="../styles/image.css">
+      <link rel="stylesheet" href="../styles/nav.css">
+
+
+      <!--Meta viewport nastaven pro upravení stránek pro mobilní zařízení-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <meta name="keywords" content="život s postižením, cestování s postižením, domácí péče, 5tý stupeň,">
+      <meta name="author" content="Emma Robinson">
+      <meta name="description" content="život s postižením, domácí péče"><!--VYPLNIT-->
+      
+      
+      <!--Fonty-->
+      <link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    </head>
+    <body>
+      <!--horní lišta - vyplnit kategorii, článek a odkazy-->
+      <header>
+        <div class="header-container" >
+          <div class="header-part">
+            <a href="/">
+              <div class="header-home-container"> 
+                <img class="home-icon" src="../icons/home.png"> 
+                <p>Home</p>
+              </div>
+            </a>
+            <div class="header-home-container" style="width: 15px;"><img style="width: 100%; padding-left: 5px; padding-right: 5px;" src="/icons/shark.png" ></div>
+          </div>
+          
+          <div class="header-part">
+            <a href="/about">
+              <div class="header-home-container"> 
+                <p>O mně</p>
+              </div>
+            </a>
+          </div>         
+  
+        </div>
+      </header>
+      
+      <!--page nastavena na maximální šířku cca 900px-->
+      <main class="page">
+        <div class="content">
+          <div class="content-article">
+            
+            
+            <!--grid na rozdělení článku a MENU-->
+            <div class="article-grid">
+              <div class="article-part">
+                                      
+                <h1 class="inside-article-title js-title">Jmenuju se Emma Robinson</h1><!--vyplnit-->
+                <img style="width: 100%; object-fit: cover; margin-bottom: 15px;" src="../pictures/jsem-emma-robinson/jmenuji-se-emma-robinson.jpg">
+                <p class="odstavec">Ani jedno z těch jmen nemám od narození.
+                  Můj brácha říkal, že tím pádem nejsem důvěryhodná a už nikdy nebudu.
+                  Jsem Emma a Robinson od té chvíle, co se mi narodil můj syn.  </p>
+                <p class="odstavec">Žijeme sami na ostrově jeho utrpení.
+                  Ne, že by kolem nás nebyla spousta lidí, to v pocitu osamělosti nehraje vůbec žádnou roli.
+                  Vždycky jsem si přála být dobrodruhem. Jsem dobrodruhem. </p>
+                <p class="odstavec">A voda je šíleně ledová, což je skvělý na žíly a já plavu proti proudu což je 
+                  skvělý na fyzičku. Musíš velice dobře plavat, abys v pořádku doplaval. A kam vlastně?  
+                  A zatímco občas polykám andělíčky a zdá se mi o hovnech, uběhla řada let. Je to instinktivní boj. 
+                </p>
+                <p class="odstavec">Víte co je to Kuba? 
+                </p>
+                <p class="odstavec">Kuba je moje okouzlujíci diktatura, můj ostrov svobody, moje bída, moje kariera, moje samota, moje tma a moje cesta domů. Co jsem Kubovo? 
+                </p>
+                <p class="odstavec">Jsem Kubovo mostem. A jsem z toho dost prohnutá.  
+                </p>
+              </div>
+              <!--začátek kódu pro MENU - Menu se nahrává přes JavaScript-->
+              <%- include('nav-bar.ejs') %>
+            </div>
+          </div>
+        </div>
+
+
+      </main>
+      <footer>
+        <%- include('footer.ejs') %>
+    </footer>
+    </body>
+  </html>
